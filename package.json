@@ -1,15 +1,12 @@
 {
-    "name": "openapi-typescript-codegen",
+    "name": "@thulium/openapi-typescript-codegen",
     "version": "0.0.1",
     "description": "Library that generates Typescript clients based on the OpenAPI specification.",
     "author": "Ferdi Koomen",
     "homepage": "https://github.com/ferdikoomen/openapi-typescript-codegen",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ferdikoomen/openapi-typescript-codegen.git"
-    },
-    "bugs": {
-        "url": "https://github.com/ferdikoomen/openapi-typescript-codegen/issues"
+        "url": "git+https://github.com/thulium/openapi-typescript-codegen.git"
     },
     "license": "MIT",
     "keywords": [
