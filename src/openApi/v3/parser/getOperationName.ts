@@ -11,6 +11,7 @@ export const getOperationName = (url: string, method: string, operationId?: stri
             operationId
                 .replace(/^[^a-zA-Z]+/g, '')
                 .replace(/[^\w\-]+/g, '-')
+                .replace(/_?\d+$/, '')
                 .trim()
         );
     }

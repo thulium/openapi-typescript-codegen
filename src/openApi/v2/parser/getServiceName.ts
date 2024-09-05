@@ -8,6 +8,8 @@ export const getServiceName = (value: string): string => {
     const clean = value
         .replace(/^[^a-zA-Z]+/g, '')
         .replace(/[^\w\-]+/g, '-')
+        .replace('_controller', '')
+        .replace('_web_api', '')
         .trim();
     return camelCase(clean, { pascalCase: true });
 };

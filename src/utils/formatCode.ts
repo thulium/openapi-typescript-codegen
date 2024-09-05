@@ -2,7 +2,7 @@ import { EOL } from 'os';
 
 export const formatCode = (s: string): string => {
     let indent: number = 0;
-    let lines = s.split(/[\r\n]+/);
+    let lines = s.split(EOL);
     lines = lines.map(line => {
         line = line.trim().replace(/^\*/g, ' *');
         let i = indent;
@@ -13,7 +13,7 @@ export const formatCode = (s: string): string => {
             indent--;
             i--;
         }
-        const result = `${'\t'.repeat(i)}${line}`;
+        const result = `${'    '.repeat(i)}${line}`;
         if (result.trim() === '') {
             return '';
         }

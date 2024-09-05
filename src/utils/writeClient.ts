@@ -9,7 +9,6 @@ import { isSubDirectory } from './isSubdirectory';
 import type { Templates } from './registerHandlebarTemplates';
 import { writeClientClass } from './writeClientClass';
 import { writeClientCore } from './writeClientCore';
-import { writeClientIndex } from './writeClientIndex';
 import { writeClientModels } from './writeClientModels';
 import { writeClientSchemas } from './writeClientSchemas';
 import { writeClientServices } from './writeClientServices';
@@ -99,7 +98,8 @@ export const writeClient = async (
         await writeClientClass(client, templates, outputPath, httpClient, clientName, indent, postfixServices);
     }
 
-    if (exportCore || exportServices || exportSchemas || exportModels) {
+    // We do not need index.ts
+/*    if (exportCore || exportServices || exportSchemas || exportModels) {
         await mkdir(outputPath);
         await writeClientIndex(
             client,
@@ -114,5 +114,5 @@ export const writeClient = async (
             postfixModels,
             clientName
         );
-    }
+    }*/
 };
