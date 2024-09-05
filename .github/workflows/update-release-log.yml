@@ -1,0 +1,16 @@
+name: Update Release Log
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  update-release-log:
+    permissions:
+      contents: write
+    uses: thulium/github-internals/.github/workflows/thulium-update-release-log.yml@main
+    secrets: inherit
