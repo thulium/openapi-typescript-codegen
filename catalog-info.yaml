@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: openapi-typescript-codegen
+  annotations:
+    github.com/project-slug: 'thulium/openapi-typescript-codegen'
+spec:
+  type: library
+  lifecycle: production
+  owner: frontend
